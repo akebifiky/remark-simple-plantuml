@@ -2,7 +2,7 @@ const chai = require("chai");
 const fs = require("fs");
 const path = require("path");
 const remark = require("remark");
-const plugin = require("../index").default;
+const plugin = require("../index");
 
 describe("Plugin", () => {
   it("should convert PlantUML code to Image nodes", () => {
