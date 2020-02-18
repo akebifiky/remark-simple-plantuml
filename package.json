@@ -1,0 +1,39 @@
+{
+  "name": "remark-simple-plantuml",
+  "version": "1.0.0",
+  "description": "`remark-simple-plantuml` is a simple plugin for [remarkjs](https://github.com/remarkjs/remark) that converts PlantUML code written in Markdown to `img` tags.",
+  "main": "./index.js",
+  "scripts": {
+    "test": "mocha",
+    "coverage": "nyc npm run test",
+    "lint": "eslint --fix ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akebifiky/remark-simple-plantuml.git"
+  },
+  "author": "akebifiky",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/akebifiky/remark-simple-plantuml/issues"
+  },
+  "homepage": "https://github.com/akebifiky/remark-simple-plantuml#readme",
+  "keywords": [
+    "remark",
+    "plantuml"
+  ],
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "mocha": "^7.0.1",
+    "nyc": "^15.0.0",
+    "prettier": "^1.19.1",
+    "remark": "^11.0.2"
+  },
+  "dependencies": {
+    "plantuml-encoder": "^1.4.0",
+    "unist-util-visit": "^2.0.2"
+  }
+}
