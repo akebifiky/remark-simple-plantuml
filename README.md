@@ -1,8 +1,8 @@
 # Remark Simple PlantUML Plugin
 
-`remark-simple-plantuml` is a simple plugin for [remarkjs](https://github.com/remarkjs/remark) that converts PlantUML code blocks to image nodes.
+[![Build Status](https://travis-ci.org/akebifiky/remark-simple-plantuml.svg?branch=master)](https://travis-ci.org/akebifiky/remark-simple-plantuml)
 
-This project is currently under development.
+`remark-simple-plantuml` is a simple plugin for [remarkjs](https://github.com/remarkjs/remark) that converts PlantUML code blocks to image nodes.
 
 ## Example
 
@@ -53,12 +53,13 @@ remark().use(simplePlantUML, { baseUrl: "https://www.plantuml.com/plantuml/svg" 
 
 You can use this plugin in any frameworks support remarkjs.
 
-If you want to use in the classic preset of Docusaurus 2, like me, set configuration in your `docusaurus.config.js` like following.
+If you want to use in the classic preset of [Docusaurus 2](https://v2.docusaurus.io/), like me, set configuration in your `docusaurus.config.js` like following.
 
 ```javascript
 const simplePlantUML = require("remark-simple-plantuml");
 
-...,
+// your configurations...
+
 presets: [
     [
       "@docusaurus/preset-classic",
@@ -70,4 +71,6 @@ presets: [
       }
     ]
   ],
-...
+
+//...
+```
