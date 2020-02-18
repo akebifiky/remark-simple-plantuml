@@ -1,5 +1,5 @@
-import visit from "unist-util-visit";
-import { encode } from "plantuml-encoder";
+const visit = require("unist-util-visit");
+const plantumlEncoder = require("plantuml-encoder");
 
 const DEFAULT_OPTIONS = {
   baseUrl: "https://www.plantuml.com/plantuml/png"
@@ -24,7 +24,7 @@ function remarkSimplePlantumlPlugin(pluginOptions) {
       if (!lang || !value || lang !== "plantuml") return;
 
       node.type = "image";
-      node.url = `${options.baseUrl.replace(/\/$/, "")}/${encode(value)}`;
+      node.url = `${options.baseUrl.replace(/\/$/, "")}/${plantumlEncoder.encode(value)}`;
       node.alt = meta;
       node.meta = undefined;
     });
@@ -32,4 +32,4 @@ function remarkSimplePlantumlPlugin(pluginOptions) {
   };
 }
 
-export default remarkSimplePlantumlPlugin;
+module.exports = remarkSimplePlantumlPlugin;
