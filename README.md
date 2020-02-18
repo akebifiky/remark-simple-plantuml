@@ -4,6 +4,12 @@
 
 `remark-simple-plantuml` is a simple plugin for [remarkjs](https://github.com/remarkjs/remark) that converts PlantUML code blocks to image nodes.
 
+## Installing
+
+```bash
+npm install --save @akebifiky/remark-simple-plantuml
+```
+
 ## Example
 
 You can use this plugin like following
@@ -24,7 +30,7 @@ class SimplePlantUMLPlugin {
 
 ```javascript
 const remark = require("remark");
-const simplePlantUML = require("remark-simple-plantuml");
+const simplePlantUML = require("@akebifiky/remark-simple-plantuml");
 const fs = require("fs");
 const path = require("path");
 
@@ -56,7 +62,7 @@ You can use this plugin in any frameworks support remarkjs.
 If you want to use in the classic preset of [Docusaurus 2](https://v2.docusaurus.io/), like me, set configuration in your `docusaurus.config.js` like following.
 
 ```javascript
-const simplePlantUML = require("remark-simple-plantuml");
+const simplePlantUML = require("@akebifiky/remark-simple-plantuml");
 
 // your configurations...
 
