@@ -1,6 +1,6 @@
 # Remark Simple PlantUML Plugin
 
-[![Build Status](https://travis-ci.org/akebifiky/remark-simple-plantuml.svg?branch=master)](https://travis-ci.org/akebifiky/remark-simple-plantuml)
+[![Build Status](https://travis-ci.org/akebifiky/remark-simple-plantuml.svg?branch=master)](https://travis-ci.org/akebifiky/remark-simple-plantuml) [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 
 `remark-simple-plantuml` is a simple plugin for [remarkjs](https://github.com/remarkjs/remark) that converts PlantUML code blocks to image nodes.
 
