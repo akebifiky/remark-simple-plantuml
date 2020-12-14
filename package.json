@@ -1,6 +1,6 @@
 {
   "name": "@akebifiky/remark-simple-plantuml",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "`remark-simple-plantuml` is a simple plugin for [remarkjs](https://github.com/remarkjs/remark) that converts PlantUML code written in Markdown to `img` tags.",
   "main": "./index.js",
   "scripts": {
