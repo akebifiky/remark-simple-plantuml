@@ -49,10 +49,12 @@ console.log(output);
 You can use specific PlantUML server by the option 'baseUrl'.
 (The default is `https://www.plantuml.com/plantuml/png`)
 
+You can specify to render the diagram as image tag (type: "image") or as embedded svg object which supports links and to select text within the diagram (type: "svg"). To allow svg as HTML element in markdown you require a plugin like [rehype-raw](https://github.com/rehypejs/rehype-raw).
+
 If you want to use SVG, you can configure like following.
 
 ```javascript
-remark().use(simplePlantUML, { baseUrl: "https://www.plantuml.com/plantuml/svg" }).processSync(input);
+remark().use(simplePlantUML, { baseUrl: "https://www.plantuml.com/plantuml/svg", type: "svg" }).processSync(input);
 ```
 
 ## Integration

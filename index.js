@@ -2,7 +2,8 @@ const visit = require("unist-util-visit");
 const plantumlEncoder = require("plantuml-encoder");
 
 const DEFAULT_OPTIONS = {
-  baseUrl: "https://www.plantuml.com/plantuml/png"
+  baseUrl: "https://www.plantuml.com/plantuml/png",
+  type: "image"
 };
 
 /**
@@ -23,10 +24,19 @@ function remarkSimplePlantumlPlugin(pluginOptions) {
       let { lang, value, meta } = node;
       if (!lang || !value || lang !== "plantuml") return;
 
-      node.type = "image";
-      node.url = `${options.baseUrl.replace(/\/$/, "")}/${plantumlEncoder.encode(value)}`;
+      let url = `${options.baseUrl.replace(/\/$/, "")}/${plantumlEncoder.encode(value)}`;
+
+      if (options.type === "image") {
+        node.type = "image";
+        node.url = url;
+      } else if (options.type === "svg") {
+        node.type = "paragraph";
+        node.children = [{ value: `<object type="image/svg+xml" data="${url}" />`, type: "html" }];
+      }
+
       node.alt = meta;
       node.meta = undefined;
+
     });
     return syntaxTree;
   };
